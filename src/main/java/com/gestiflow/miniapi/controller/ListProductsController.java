@@ -1,11 +1,11 @@
 package com.gestiflow.miniapi.controller;
 
+import com.gestiflow.miniapi.model.Product;
 import com.gestiflow.miniapi.repository.FakeDB;
-import org.springframework.http.HttpStatus;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/api/productos")
@@ -18,7 +18,7 @@ public class ListProductsController {
 
 
 	@GetMapping
-	public Object list() {
-		throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED, "No implementado");
+	public List<Product> list() {
+		return db.findAll();
 	}
 }
