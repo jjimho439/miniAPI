@@ -16,6 +16,7 @@ public class ListProductsController {
 		this.db = db;
 	}
 
+
 	@GetMapping
 	public Object list() {
 		throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED, "No implementado");
