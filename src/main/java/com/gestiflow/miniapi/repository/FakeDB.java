@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class FakeDB {
 	private final List<Product> products = new ArrayList<>(List.of(
-		new Product(1L, "Teclado mecánico", "Teclado con switches rojos", 59.90, 25),
-		new Product(2L, "Ratón inalámbrico", "Ratón óptico de 1600 DPI", 19.95, 40),
-		new Product(3L, "Monitor 24 pulgadas", "Panel IPS Full HD", 139.00, 8)
+		new Product(1L, "Auriculares inalámbricos", "Auriculares con cancelación activa de ruido", 79.99, 15),
+		new Product(2L, "Alfombrilla gaming XL", "Superficie de tela antideslizante e impermeable", 14.95, 60),
+		new Product(3L, "Webcam Full HD 1080p", "Cámara web con micrófono integrado para streaming", 39.90, 20)
 	));
 
 	private long nextId = 4;
