@@ -1,5 +1,6 @@
 package com.gestiflow.miniapi.controller;
 
+import com.gestiflow.miniapi.model.Product;
 import com.gestiflow.miniapi.repository.FakeDB;
 import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +19,7 @@ public class StockTotalController {
 	// Devuelve la suma del stock de todos los productos.
 	@GetMapping("/stock-total")
 	public Map<String, Integer> stockTotal() {
-		int total = (int) db.findAll().stream().count();
-		//int total = db.findAll().stream().mapToInt(Product::stock).sum();
+		int total = db.findAll().stream().mapToInt(Product::stock).sum();
 		// hola
 		return Map.of("stockTotal", total);
 	}
